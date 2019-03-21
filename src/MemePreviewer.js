@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 
 class MemePreviewer extends Component {
+  userAddTopText = e => {
+    this.props.AddTopText(this.props.text);
+  };
   render() {
-    const { memePreview } = this.props;
+    const { currentTopText } = this.props;
     return (
       <div>
+        <p>{currentTopText}</p>
         <img src={this.props.currentImage} />
       </div>
     );

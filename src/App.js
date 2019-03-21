@@ -15,15 +15,19 @@ class App extends Component {
         "./images/PrincessBride.png",
         "./images/SuspectBaby.png"
       ],
-      currentItemText: "sadfasd",
-      currentImage: ""
+      currentImage: "",
+      currentTopText: "hi",
+      currentBottomText: "mom"
     };
   }
-  defaultTopText = text => {
-    this.setState({ currentItemText: text });
+  setTopText = text => {
+    this.setState({ currentTopText: text });
   };
   memePreview = memePreview => {
     this.setState({ currentImage: memePreview });
+  };
+  addNew = text => {
+    this.setState({ currentTopText: text });
   };
   render() {
     return (
@@ -35,12 +39,18 @@ class App extends Component {
           />
         </div>
         <div id="memePreviewer">
-          <MemePreviewer currentImage={this.state.currentImage} />
+          <MemePreviewer
+            currentImage={this.state.currentImage}
+            currentTopText={this.state.currentTopText}
+            text={this.state.currentTopText}
+          />
         </div>
         <div id="memeInputPanel">
           <MemeInputPanel
             text={this.state.currentItemText}
-            defaultTopText={this.defaultTopText}
+            currentTopText={this.state.currentTopText}
+            addNew={this.addNew}
+            setTopText={this.setTopText}
           />
         </div>
       </div>
