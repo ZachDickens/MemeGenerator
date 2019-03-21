@@ -14,15 +14,22 @@ class App extends Component {
         "./images/Picard.png",
         "./images/PrincessBride.png",
         "./images/SuspectBaby.png"
-      ]
+      ],
+      currentItemText: "sadfasd"
     };
   }
+  defaultTopText = text => {
+    this.setState({ currentItemText: text });
+  };
   render() {
     return (
       <div>
         <ThumbnailPicker images={this.state.images} />
         <div>Meme Preview</div>
-        <div>Meme Text</div>
+        <MemeInputPanel
+          text={this.state.currentItemText}
+          defaultTopText={this.defaultTopText}
+        />
       </div>
     );
   }
