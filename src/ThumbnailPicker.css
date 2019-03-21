@@ -1,0 +1,7 @@
+#imageItems {
+  list-style: none;
+}
+
+#imageItems img {
+  max-width: 100px;
+}

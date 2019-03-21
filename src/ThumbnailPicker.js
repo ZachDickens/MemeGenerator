@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./ThumbnailPicker.css";
 
 class ThumbnailPicker extends Component {
   render() {
