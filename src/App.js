@@ -1,13 +1,26 @@
 import React, { Component } from "react";
 import "./App.css";
-import ImageList from "./ImageList";
-import MemePreview from "./MemePreview";
-import MemeText from "./MemeText";
+import ThumbnailPicker from "./ThumbnailPicker";
+import MemeInputPanel from "./MemeInputPanel";
+import MemePreviewer from "./MemePreviewer";
+
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      images: [
+        "./images/CryingJordan.png",
+        "./images/LordOfRings.png",
+        "./images/Picard.png",
+        "./images/PrincessBride.png",
+        "./images/SuspectBaby.png"
+      ]
+    };
+  }
   render() {
     return (
       <div>
-        <div>Image List</div>
+        <ThumbnailPicker images={this.state.images} />
         <div>Meme Preview</div>
         <div>Meme Text</div>
       </div>
