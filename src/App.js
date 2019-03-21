@@ -15,21 +15,34 @@ class App extends Component {
         "./images/PrincessBride.png",
         "./images/SuspectBaby.png"
       ],
-      currentItemText: "sadfasd"
+      currentItemText: "sadfasd",
+      currentImage: ""
     };
   }
   defaultTopText = text => {
     this.setState({ currentItemText: text });
   };
+  memePreview = memePreview => {
+    this.setState({ currentImage: memePreview });
+  };
   render() {
     return (
       <div>
-        <ThumbnailPicker images={this.state.images} />
-        <div>Meme Preview</div>
-        <MemeInputPanel
-          text={this.state.currentItemText}
-          defaultTopText={this.defaultTopText}
-        />
+        <div id="thumbnailPicker">
+          <ThumbnailPicker
+            images={this.state.images}
+            memePreview={this.memePreview}
+          />
+        </div>
+        <div id="memePreviewer">
+          <MemePreviewer currentImage={this.state.currentImage} />
+        </div>
+        <div id="memeInputPanel">
+          <MemeInputPanel
+            text={this.state.currentItemText}
+            defaultTopText={this.defaultTopText}
+          />
+        </div>
       </div>
     );
   }
