@@ -15,9 +15,9 @@ class App extends Component {
         "./images/PrincessBride.png",
         "./images/SuspectBaby.png"
       ],
-      currentImage: "",
-      currentTopText: "",
-      currentBottomText: "mom"
+      currentImage: "./images/Picard.png",
+      currentTopText: "Your Text",
+      currentBottomText: "Goes Here"
     };
   }
   setTopText = text => {
