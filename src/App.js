@@ -16,7 +16,7 @@ class App extends Component {
         "./images/SuspectBaby.png"
       ],
       currentImage: "",
-      currentTopText: "hi",
+      currentTopText: "",
       currentBottomText: "mom"
     };
   }
@@ -28,6 +28,9 @@ class App extends Component {
   };
   addNew = text => {
     this.setState({ currentTopText: text });
+  };
+  setBottomText = text => {
+    this.setState({ currentBottomText: text });
   };
   render() {
     return (
@@ -42,6 +45,7 @@ class App extends Component {
           <MemePreviewer
             currentImage={this.state.currentImage}
             currentTopText={this.state.currentTopText}
+            currentBottomText={this.state.currentBottomText}
             text={this.state.currentTopText}
           />
         </div>
@@ -49,8 +53,10 @@ class App extends Component {
           <MemeInputPanel
             text={this.state.currentItemText}
             currentTopText={this.state.currentTopText}
+            currentBottomText={this.state.currentBottomText}
             addNew={this.addNew}
             setTopText={this.setTopText}
+            setBottomText={this.setBottomText}
           />
         </div>
       </div>

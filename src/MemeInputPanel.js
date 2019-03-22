@@ -4,8 +4,14 @@ class MemeInputPanel extends Component {
   onTextChange = event => {
     this.props.setTopText(event.target.value);
   };
+
+  onTextChange2 = event => {
+    this.props.setBottomText(event.target.value);
+  };
+
   render() {
     const { currentTopText } = this.props;
+    const { currentBottomText } = this.props;
     return (
       <div>
         <label>
@@ -14,6 +20,14 @@ class MemeInputPanel extends Component {
             type="text"
             value={currentTopText}
             onChange={this.onTextChange}
+          />
+        </label>
+        <label>
+          Bottom Text
+          <input
+            type="text"
+            value={currentBottomText}
+            onChange={this.onTextChange2}
           />
         </label>
       </div>
