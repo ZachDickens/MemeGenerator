@@ -9,11 +9,12 @@ class App extends Component {
     super();
     this.state = {
       images: [
-        "./images/CryingJordan.png",
         "./images/LordOfRings.png",
         "./images/Picard.png",
         "./images/PrincessBride.png",
-        "./images/SuspectBaby.png"
+        "./images/SuspectBaby.png",
+        "./images/CrazyGirl.jpg",
+        "./images/ManFinger.jpeg"
       ],
       currentImage: "./images/Picard.png",
       currentTopText: "Your Text",
