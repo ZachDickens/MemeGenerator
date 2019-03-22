@@ -34,7 +34,7 @@ class App extends Component {
   };
   render() {
     return (
-      <div>
+      <div id="body">
         <div id="thumbnailPicker">
           <ThumbnailPicker
             images={this.state.images}
