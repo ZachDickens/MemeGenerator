@@ -3,10 +3,11 @@
 }
 
 #body {
+  padding: 1rem;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 6fr 1fr;
-  grid-template-rows: 15px 550px 1fr;
+  grid-template-rows: 30px 550px 1fr;
   justify-items: center;
   text-align: center;
 }
@@ -23,9 +24,29 @@
 
 #memePreviewer img {
   grid-row: 2/-1;
-  height: 400px;
+  height: 500px;
 }
 
 #memePreviewer {
   grid-column: 2/3;
+}
+
+#topMeme,
+#bottomMeme {
+  left: 0;
+  right: 0;
+  text-align: center;
+  position: absolute;
+}
+
+#topMeme {
+  top: 0;
+}
+
+#bottomMeme {
+  bottom: 0;
+}
+
+#memePreviewer div {
+  position: relative;
 }
