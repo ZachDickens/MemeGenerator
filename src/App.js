@@ -61,6 +61,9 @@ class App extends Component {
               setBottomText={this.setBottomText}
             />
           </div>
+          <div id="titleText">
+            <p>Meme Generator</p>
+          </div>
         </div>
       </div>
     );
