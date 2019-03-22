@@ -35,30 +35,32 @@ class App extends Component {
   };
   render() {
     return (
-      <div id="body">
-        <div id="thumbnailPicker">
-          <ThumbnailPicker
-            images={this.state.images}
-            memePreview={this.memePreview}
-          />
-        </div>
-        <div id="memePreviewer">
-          <MemePreviewer
-            currentImage={this.state.currentImage}
-            currentTopText={this.state.currentTopText}
-            currentBottomText={this.state.currentBottomText}
-            text={this.state.currentTopText}
-          />
-        </div>
-        <div id="memeInputPanel">
-          <MemeInputPanel
-            text={this.state.currentItemText}
-            currentTopText={this.state.currentTopText}
-            currentBottomText={this.state.currentBottomText}
-            addNew={this.addNew}
-            setTopText={this.setTopText}
-            setBottomText={this.setBottomText}
-          />
+      <div class="Background">
+        <div id="body">
+          <div id="thumbnailPicker">
+            <ThumbnailPicker
+              images={this.state.images}
+              memePreview={this.memePreview}
+            />
+          </div>
+          <div id="memePreviewer">
+            <MemePreviewer
+              currentImage={this.state.currentImage}
+              currentTopText={this.state.currentTopText}
+              currentBottomText={this.state.currentBottomText}
+              text={this.state.currentTopText}
+            />
+          </div>
+          <div id="memeInputPanel">
+            <MemeInputPanel
+              text={this.state.currentItemText}
+              currentTopText={this.state.currentTopText}
+              currentBottomText={this.state.currentBottomText}
+              addNew={this.addNew}
+              setTopText={this.setTopText}
+              setBottomText={this.setBottomText}
+            />
+          </div>
         </div>
       </div>
     );
