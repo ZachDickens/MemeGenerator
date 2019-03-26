@@ -16,6 +16,7 @@ class MemePreviewer extends Component {
         <p id="topMeme">{currentTopText}</p>
         <img src={this.props.currentImage} />
         <p id="bottomMeme">{currentBottomText}</p>
+        <button>Publish</button>
       </div>
     );
   }
