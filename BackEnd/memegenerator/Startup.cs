@@ -25,6 +25,12 @@ namespace memegenerator
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(o => o.AddPolicy("MyMeme", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -39,7 +45,7 @@ namespace memegenerator
             {
                 app.UseHsts();
             }
-
+            app.UseCors("MyMeme");
             app.UseHttpsRedirection();
             app.UseMvc();
         }
