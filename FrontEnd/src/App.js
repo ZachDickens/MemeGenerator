@@ -21,6 +21,12 @@ class App extends Component {
       currentBottomText: "Goes Here"
     };
   }
+  componentDidMount() {
+    fetch("https://localhost:44349/api/meme")
+      .then(res => res.json())
+      .then(json => this.setState({ images: json }));
+  }
+
   setTopText = text => {
     this.setState({ currentTopText: text });
   };

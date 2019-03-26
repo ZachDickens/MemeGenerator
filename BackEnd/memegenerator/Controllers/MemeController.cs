@@ -11,5 +11,27 @@ namespace memegenerator.Controllers
     [ApiController]
     public class MemeController : ControllerBase
     {
+        private static List<string> all = new List<string>()
+        {
+            "./images/LordOfRings.png",
+            "./images/Picard.png",
+            "./images/PrincessBride.png",
+            "./images/SuspectBaby.png",
+            "./images/CrazyGirl.jpg",
+            "./images/ManFinger.jpeg"
+        };
+
+        [HttpGet]
+        public ActionResult<IEnumerable<string>> Get()
+        {
+            return all;
+        }
+
+        [HttpPost]
+        public ActionResult<bool> Post([FromBody] string todo)
+        {
+            all.Add(todo);
+            return true;
+        }
     }
 }
