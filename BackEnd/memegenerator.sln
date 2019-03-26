@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "memegenerator", "memegenerator\memegenerator.csproj", "{FED008AF-08F8-4E7A-A260-30E36C1AA05F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "memegenerator.Tests", "memegenerator.Tests\memegenerator.Tests.csproj", "{BB21E5A1-9B68-4F63-BEAD-512E46556DBA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FED008AF-08F8-4E7A-A260-30E36C1AA05F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FED008AF-08F8-4E7A-A260-30E36C1AA05F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FED008AF-08F8-4E7A-A260-30E36C1AA05F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FED008AF-08F8-4E7A-A260-30E36C1AA05F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB21E5A1-9B68-4F63-BEAD-512E46556DBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB21E5A1-9B68-4F63-BEAD-512E46556DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB21E5A1-9B68-4F63-BEAD-512E46556DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB21E5A1-9B68-4F63-BEAD-512E46556DBA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06121F94-2824-4BE6-BCAF-3DAEDA76D0DF}
+	EndGlobalSection
+EndGlobal
