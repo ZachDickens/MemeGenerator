@@ -21,6 +21,12 @@ class App extends Component {
       currentBottomText: "Goes Here"
     };
   }
+  componentDidMount() {
+    fetch("https://localhost:44384/api/meme")
+      .then(res => res.json())
+      .then(json => this.setState({ currentImage: json }));
+  }
+
   setTopText = text => {
     this.setState({ currentTopText: text });
   };
@@ -33,9 +39,27 @@ class App extends Component {
   setBottomText = text => {
     this.setState({ currentBottomText: text });
   };
+  addNewMeme = text => {
+    fetch("https://localhost:44384/api/meme", {
+      method: "POST",
+      body: JSON.stringify(text),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then(res => {
+        if (res.ok) {
+          const newMeme = [...this.state.images, text];
+          this.setState({ images: newMeme });
+        }
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  };
   render() {
     return (
-      <div class="Background">
+      <div className="Background">
         <div id="body">
           <div id="thumbnailPicker">
             <ThumbnailPicker

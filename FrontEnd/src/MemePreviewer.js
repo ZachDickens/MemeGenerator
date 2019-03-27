@@ -13,9 +13,12 @@ class MemePreviewer extends Component {
     const { currentBottomText } = this.props;
     return (
       <div>
-        <p id="topMeme">{currentTopText}</p>
-        <img src={this.props.currentImage} />
-        <p id="bottomMeme">{currentBottomText}</p>
+        <div id="MemeFile">
+          <p id="topMeme">{currentTopText}</p>
+          <img src={this.props.currentImage} />
+          <p id="bottomMeme">{currentBottomText}</p>
+        </div>
+        <button>Publish Meme</button>
       </div>
     );
   }

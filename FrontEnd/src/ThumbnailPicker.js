@@ -9,7 +9,7 @@ class ThumbnailPicker extends Component {
     const { images } = this.props;
     const imageItems = images.map(item => (
       <li key={item}>
-        <img src={item} onClick={this.userSelectMeme} />
+        <img src={item} alt="meme" onClick={this.userSelectMeme} />
       </li>
     ));
     return <ul id="imageItems">{imageItems}</ul>;
