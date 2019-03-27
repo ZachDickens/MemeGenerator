@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using memegenerator;
 
 namespace memegenerator.Migrations
 {
     [DbContext(typeof(MemeContext))]
-    partial class MemeContextModelSnapshot : ModelSnapshot
+    [Migration("20190327230914_InitialTry")]
+    partial class InitialTry
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,9 +37,7 @@ namespace memegenerator.Migrations
                     b.ToTable("Memes");
 
                     b.HasData(
-                        new { Id = 1, CurrentBottomText = "MASTER CODING", CurrentImage = "/images/LordOfRings.png", CurrentTopText = "ONE DOES NOT SIMPLY" },
-                        new { Id = 2, CurrentBottomText = "DOES THIS ERROR MEAN", CurrentImage = "/images/Picard.png", CurrentTopText = "WHAT THE HECK" },
-                        new { Id = 3, CurrentBottomText = "ALL I HAD TO DO IS RESTART VISUAL STUDIO?", CurrentImage = "/images/SuspectBaby.png", CurrentTopText = "SO YOU'RE TELLIN ME" }
+                        new { Id = 1, CurrentBottomText = "MASTER CODING", CurrentImage = "/images/LordOfRings.png", CurrentTopText = "ONE DOES NOT SIMPLY" }
                     );
                 });
 #pragma warning restore 612, 618
