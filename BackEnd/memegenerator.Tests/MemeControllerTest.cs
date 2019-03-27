@@ -3,7 +3,7 @@ using Xunit;
 
 namespace memegenerator.Tests
 {
-    public class UnitTest1
+    public class MemeControllerTest
     {
         [Fact]
         public void Test1()
