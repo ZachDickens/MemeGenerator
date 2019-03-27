@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using memegenerator.Model;
+using memegenerator.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,23 +13,23 @@ namespace memegenerator.Controllers
     [ApiController]
     public class MemeController : ControllerBase
     {
+        MemeRepository memeRepo;
 
-        private static List<string> all = new List<string>()
+        public MemeController(MemeRepository memeRepo)
         {
-             "test", "test1", "test2"
-        };
-
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
-        {
-            return all;
+            this.memeRepo = memeRepo;
         }
-       
-        [HttpPost]
-        public ActionResult<bool> Post([FromBody] string meme)
+      
+        [HttpGet]
+        public ActionResult<IEnumerable<Meme>> Get()
         {
-            all.Add(meme);
-            return true;
+            return Ok(memeRepo.GetAll());
+        }
+
+        [HttpPost]
+        public void Post([FromBody] Meme meme)
+        {
+            memeRepo.Add(meme);
         }
 
 
