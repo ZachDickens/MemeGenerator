@@ -3,7 +3,8 @@ import "./ThumbnailPicker.css";
 
 class ThumbnailPicker extends Component {
   userSelectMeme = e => {
-    this.props.memePreview(e.target.src);
+    const myUrl = new URL(e.target.src);
+    this.props.memePreview(myUrl.pathname);
   };
   render() {
     const { images } = this.props;

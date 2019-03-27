@@ -9,16 +9,20 @@ class MemePreviewer extends Component {
   };
 
   render() {
-    const { currentTopText } = this.props;
-    const { currentBottomText } = this.props;
+    const {
+      currentTopText,
+      currentBottomText,
+      currentImage,
+      addNewMeme
+    } = this.props;
     return (
       <div>
         <div id="MemeFile">
           <p id="topMeme">{currentTopText}</p>
-          <img src={this.props.currentImage} />
+          <img src={currentImage} />
           <p id="bottomMeme">{currentBottomText}</p>
         </div>
-        <button>Publish Meme</button>
+        <button onClick={addNewMeme}>Publish Meme</button>
       </div>
     );
   }
