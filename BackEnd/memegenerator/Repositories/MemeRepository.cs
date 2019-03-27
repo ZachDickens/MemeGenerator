@@ -1,8 +1,6 @@
 ﻿using memegenerator.Model;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace memegenerator.Repository
 {
@@ -20,9 +18,10 @@ namespace memegenerator.Repository
             return db.Memes.ToList();
         }
 
-        internal void Add(Meme meme)
+        public void Add(Meme meme)
         {
-            throw new NotImplementedException();
+            db.Memes.Add(meme);
+            db.SaveChanges();
         }
     }
 }

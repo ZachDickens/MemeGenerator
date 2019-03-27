@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using memegenerator.Repository;
+﻿using memegenerator.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace memegenerator
 {
@@ -22,7 +15,6 @@ namespace memegenerator
         }
 
         public IConfiguration Configuration { get; }
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -36,11 +28,8 @@ namespace memegenerator
             }));
 
             services.AddDbContext<MemeContext>();
-            services.AddScoped<MemeRepository, MemeRepository>();
-            
+            services.AddScoped<MemeRepository, MemeRepository>();            
         }
-
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
@@ -52,7 +41,6 @@ namespace memegenerator
             {
                 app.UseHsts();
             }
-
             app.UseCors("MyMeme");
             app.UseHttpsRedirection();
             app.UseMvc();

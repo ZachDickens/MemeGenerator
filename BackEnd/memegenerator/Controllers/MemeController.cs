@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using memegenerator.Model;
 using memegenerator.Repository;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace memegenerator.Controllers
@@ -31,7 +27,5 @@ namespace memegenerator.Controllers
         {
             memeRepo.Add(meme);
         }
-
-
     }
 }

@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace memegenerator.Model
+﻿namespace memegenerator.Model
 {
     public class Meme
     {
-        public string images { get; set; }
-        public string currentTopText { get; set; }
-        public string currentBottomText { get; set; }
+        public int Id { get; set; }
+        public string Images { get; set; }
+        public string CurrentTopText { get; set; }
+        public string CurrentBottomText { get; set; }
 
     }
 }
