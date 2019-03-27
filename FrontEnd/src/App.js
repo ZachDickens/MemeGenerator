@@ -3,6 +3,7 @@ import "./App.css";
 import ThumbnailPicker from "./ThumbnailPicker";
 import MemeInputPanel from "./MemeInputPanel";
 import MemePreviewer from "./MemePreviewer";
+import UserCreatedMemes from "./UserCreatedMemes";
 
 class App extends Component {
   constructor() {
@@ -89,7 +90,10 @@ class App extends Component {
               setBottomText={this.setBottomText}
             />
           </div>
-          <div id="userCreatedMemes" />
+          <div id="userCreatedMemes">
+            <UserCreatedMemes allMemes={this.state.allMemes} />
+          </div>
+
           <div id="titleText">
             <p>Meme Generator</p>
           </div>
