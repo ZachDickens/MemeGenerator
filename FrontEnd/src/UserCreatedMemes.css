@@ -14,7 +14,9 @@
 
 #userMemeContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;    
+    background-color: rgba(243, 242, 242)
+  );
     
 }
 
