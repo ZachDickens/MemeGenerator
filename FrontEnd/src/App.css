@@ -15,11 +15,11 @@
   text-align: center;
 }
 
-.Background{  
+.Background {
   background-image: url("/images/Dad.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  height: 90vh; 
+  height: 95vh;
 }
 
 #memeInputPanel {
