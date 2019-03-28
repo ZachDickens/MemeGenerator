@@ -1,0 +1,29 @@
+#userCreatedMemes{
+    text-align: center;
+}
+
+#userUl {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#userUl li {
+    list-style: none;
+}
+
+#userMemeContainer {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#userMemeContainer img{
+    height: 100px;
+    width: 150px;
+}
+
+#userMemes{
+    display: flex;
+    flex-wrap: wrap;
+}

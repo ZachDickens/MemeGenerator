@@ -4,18 +4,23 @@
 
 #body {
   background: linear-gradient(
-      rgba(243, 242, 242, 0.45),
-      rgba(248, 242, 242, 0.45)
-    ),
-    url("/images/Dad.jpg");
-  background-position: center;
+    rgba(243, 242, 242, 0.45),
+    rgba(248, 242, 242, 0.45)
+  );
   padding: 1rem;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 30px 550px 1fr;
+  grid-template-rows: 30px 550px;
   justify-items: center;
   text-align: center;
+}
+
+.Background{  
+  background-image: url("/images/Dad.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 95vh; 
 }
 
 #memeInputPanel {
