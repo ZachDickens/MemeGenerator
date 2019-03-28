@@ -90,15 +90,18 @@ class App extends Component {
               setBottomText={this.setBottomText}
             />
           </div>
-          <div id="userCreatedMemes">
-            <UserCreatedMemes allMemes={this.state.allMemes} />
-          </div>
+          
 
           <div id="titleText">
             <p>Meme Generator</p>
           </div>
         </div>
-      </div>
+        
+        <div id="userCreatedMemes">
+            <p>Check Out Theses Memes!</p>
+            <UserCreatedMemes allMemes={this.state.allMemes} />
+          </div>
+          </div>
     );
   }
 }

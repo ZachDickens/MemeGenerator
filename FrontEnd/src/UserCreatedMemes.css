@@ -1,0 +1,25 @@
+#userCreatedMemes{
+    text-align: center;
+}
+
+p{
+    font-weight: 700;
+}
+
+#userCreatedMemes img {
+    border: 5px solid rgba(0, 0, 0, 0.459);
+    height: 100px;
+    width: 150px;
+}
+
+#userMemes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em;
+    padding-inline-start: 0;
+}
+
+li{
+    list-style: none;
+}
