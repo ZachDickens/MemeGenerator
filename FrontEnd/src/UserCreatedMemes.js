@@ -6,9 +6,9 @@ class UserCreatedMemes extends Component {
   render() {
     const { allMemes } = this.props;
     const userMemes = allMemes.map(item => (
-      <div id="userMemeContainer">
+      <div>
       <ul id="UserUl">
-      <li id="userLi"key={item}>
+      <li key={item}>
         <p id="userTopMeme">{item.currentTopText}</p>
         <img src={item.currentImage} alt="meme" />
         <p id="userBottomMeme">{item.currentBottomText}</p>

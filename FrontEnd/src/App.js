@@ -98,6 +98,7 @@ class App extends Component {
         </div>
         
         <div id="userCreatedMemes">
+            <p>Check Out Theses Memes!</p>
             <UserCreatedMemes allMemes={this.state.allMemes} />
           </div>
           </div>
