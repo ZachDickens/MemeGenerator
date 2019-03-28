@@ -23,3 +23,7 @@ p{
 li{
     list-style: none;
 }
+
+#UserUl{
+    width: 200px;
+}
